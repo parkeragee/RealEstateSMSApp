@@ -1,0 +1,33 @@
+<div class="container">
+	<h3>Admin Dashboard</h3>
+	<ol class="breadcrumb">
+		<li class="active">Users</li>
+		<li><a href="/property">Properties</a></li>
+		<li class="pull-right"><a href="/session/destroy">Logout</a></li>
+	</ol>
+	<table class="table">
+		<tr>
+			<th>Email</th>
+			<th>Billing Info</th>
+			<th>Stripe ID</th>
+			<th></th>
+			<th></th>
+			<th></th>
+		</tr>
+
+		<% _.each(users, function(user) { %>
+		<tr data-id="<%= user.id %>" data-model="user">
+			<td><%= user.email %></td>
+			<td><%= user.billingInfo %></td>
+			<td><%= user.stripeID %></td>
+			<td><a href="/user/show/<%= user.id %>" class="btn btn-default btn-sm">Show</a></td>
+			<td><a href="/user/edit/<%= user.id %>" class="btn btn-info btn-sm">Edit</a></td>
+			<td><form action="/user/delete/<%= user.id %>" method="POST">
+				<input type="hidden" name="_method" value="delete" />
+				<input type="hidden" name="_csrf" value="<%= _csrf %>">
+				<input type="submit" class="btn btn-danger btn-sm delete" value="Delete" />
+			</form></td>
+		</tr>
+		<% }) %>
+	</table>
+</div>

@@ -1,0 +1,815 @@
+.invalid {
+	color: red!important;
+	margin-bottom: 30px;
+}
+
+.badges {
+	background: #FFF;
+	border: 1px solid #E9E9E9;
+	padding: 6px 12px;
+	margin-bottom: 35px;
+}
+
+#cc-logos {
+	max-height: 30px;
+	margin-bottom: 12px;
+}
+
+.price .list-group-item {
+	font-size: 18px;
+}
+
+.alert.alert-danger {
+	text-align: center;
+}
+
+.btn-green {
+	background: #2ecc71;
+	padding: 12px 62px;
+	color: #FFF;
+	text-decoration: none;
+	border-radius: 0;
+	font-weight: 400;
+	font-size: 22px;
+	margin-top: 30px;
+	display: inline-block;
+	text-transform: uppercase;
+	.font;
+	transition: all 0.3s ease;
+	border: none!important;
+
+	&:hover {
+		text-decoration: none!important;
+		color: #FFF!important;
+		background: #27ae60;
+	}
+}
+
+@light-blue: #34495E;
+@dark-blue: #2C3E50;
+
+.font {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+
+body {
+	/*color: #3C9079;*/
+	color: #888;
+	background: #FFF;
+
+	&.app {
+		background: #ecf0f1;
+	}
+}
+
+nav {
+	background: transparent;
+	padding: 20px 0;
+}
+
+.logo img {
+	max-width: 90px;
+}
+
+#login a {
+	color: #FFF;
+	.font;
+	text-decoration: none;
+	margin-right: 30px;
+	font-size: 16px;
+
+	&#signup {
+		background: rgba(250,250,250,0.2);
+		padding: 8px 22px;
+		border-radius: 0;
+	}
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+	border-color: #E9E9E9;
+	outline: none;
+	box-shadow: none;
+}
+
+input, textarea, select, input.form-control, text-area.form-control {
+	color: #888;
+	border-radius: 0!important;
+	border: 1px solid #CBCBCB!important;
+	box-shadow: none!important;
+	margin-bottom: 12px!important;
+	.font;
+}
+
+::-webkit-input-placeholder {
+   color: #888;  
+}
+
+.header {
+	background: url(https://s3.amazonaws.com/tellme-app/opt-2-bg-text.jpg) no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-color: #202022;
+	padding: 200px 0 0;
+	margin-top: -102px;
+	overflow: hidden;
+
+	h1 {
+		color: #FFF;
+		margin: 0;
+		.font;
+		font-weight: 600;
+		font-size: 42px;
+		line-height: 52px;
+		max-width: 540px;
+
+		em {
+			font-size: 36px;
+		}
+	}
+
+	.intro {
+		margin-top: 60px;
+
+		p {
+			.font;
+			color: #FFF;
+			font-size: 22px;
+			margin-top: 30px;
+		}
+
+		input[type="email"] {
+			border: none;
+			border-radius: 5px;
+			padding: 10px;
+			width: 50%;
+		}
+
+		input[type="submit"] {
+			border: none;
+			background: #38cb49;
+			color: #FFF;
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+			padding: 10px 22px;
+			margin-left: -50px;
+			transition: all 0.3s ease;
+
+			&:hover {
+				background: #56EA67;
+			}
+		}
+	}
+
+	.phone {
+
+		img {
+			max-width: 100%;
+			max-height: 460px;
+		}
+	}
+}
+
+a {
+	/*color: #3C9079;*/
+	color: #888;
+	text-decoration: underline;
+}
+
+li {
+	/*color: #3C9079;*/
+	color: #888;
+}
+
+.btn.delete {
+	background: transparent;
+	text-decoration: underline;
+}
+
+.form, #signup-form {
+	max-width: 800px;
+	margin: 0 auto;
+	background: #FFF;
+	padding: 40px 80px;
+	margin-top: 40px;
+
+	@media(max-width: 990px) {
+		padding: 40px 25px;
+	}
+
+	&.new-session {
+		max-width: 500px;
+
+		img {
+			max-height: 80px;
+			margin-bottom: 40px;
+		}
+	}
+
+	h3 {
+		margin: 0 0 22px;
+		color: @dark-blue;
+		.font;
+	}
+
+	label {
+		color: @dark-blue;
+		.font;
+		font-weight: 300;
+	}
+
+	input:focus,
+	select:focus,
+	textarea:focus,
+	button:focus {
+		border-color: #E9E9E9;
+		outline: none;
+		box-shadow: none;
+	}
+
+	input, textarea, select {
+		color: #888;
+		border-radius: 0;
+		border: 1px solid #CBCBCB;
+		box-shadow: none;
+		margin-bottom: 12px;
+		.font;
+	}
+
+	::-webkit-input-placeholder {
+	   color: #888;  
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+	   color: #888;  
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+	   color: #888;  
+	}
+
+	:-ms-input-placeholder {  
+	   color: #888;  
+	}
+
+	input[type='submit'] {
+		width: 100%;
+		margin-top: 10px;
+		background: @light-blue;
+		border: none;
+		font-size: 16px;
+		padding: 12px;
+		color: #FFF;
+	}
+
+	p {
+		color: @dark-blue;
+		.font;
+		text-align: center;
+		margin-top: 70px;
+
+		a {
+			color: @dark-blue;
+		}
+	}
+}
+
+#signup-form {
+	margin-bottom: 80px;
+
+	@media (max-width: 991px) {
+		padding: 40px 20px;
+	}
+
+	h4 {
+		.font;
+		font-size: 18px;
+		color: @dark-blue;
+
+		span {
+			font-size: 14px;
+			font-style: italic;
+		}
+	}
+}
+
+#noBillingInfo {
+	cursor: pointer;
+}
+
+#noProperties {
+	font-size: 18px;
+	margin-top: 60px;
+}
+
+.plan-information {
+
+	p {
+		font-size: 26px;
+		line-height: 22px;
+
+		span {
+			font-size: 12px;
+		}
+
+		span#monthlyCost {
+			font-size: 26px;
+			line-height: 22px;
+		}
+	}
+}
+
+.billing-true {
+	height: 16px;
+	width: 16px;
+	display: inline-block;
+	border-radius: 50%;
+	background: #2ecc71;
+}
+
+.billing-false {
+	height: 16px;
+	width: 16px;
+	display: inline-block;
+	border-radius: 50%;
+	background: #e74c3c;
+}
+
+.app-main {
+
+	.phone-number {
+		.font;
+		color: @dark-blue;
+		font-size: 18px;
+		margin-bottom: 40px;
+	}
+
+	p {
+		.font;
+		color: @dark-blue;
+	}
+
+	.main-content {
+		padding-left: 210px;
+	}
+
+	&.show {
+		background: #FFF;
+		padding: 40px 12px;
+		margin-top: 40px;
+
+		h1 {
+			font-size: 28px;
+			line-height: 36px;
+			margin-bottom: 40px;
+		}
+
+		p, li {
+			.font;
+			color: @dark-blue;
+			font-size: 22px;
+		}
+
+		.description {
+			margin-bottom: 40px;
+		}
+	}
+
+	h1 {
+		.font;
+		font-weight: 100;
+		color: @light-blue;
+		margin-bottom: 20px;
+	}
+
+	#cancel {
+		.font;
+		color: @dark-blue;
+		cursor: pointer;
+	}
+
+	#logo {
+		max-width: 120px;
+		margin: 20px 54px;
+	}
+
+	.property {
+		width: 47%;
+		margin: 1%;
+		background: #FFF;
+		padding: 20px;
+		display: inline-block;
+		transition: all 0.3s ease;
+
+		&:hover {
+			box-shadow: 0 0 10px 2px rgba(150,150,150,0.075);
+		}
+
+		@media(max-width: 990px) {
+			width: 47%;
+		}
+
+		@media(max-width: 480px) {
+			width: 98%;
+		}
+
+		.property-address {
+			.font;
+			font-size: 18px;
+			text-align: center;
+			display: block;
+			color: @dark-blue;
+			margin-bottom: 30px;
+		}
+
+		.leads {
+			display: block;
+			text-align: center;
+			.font;
+			font-size: 32px;
+			color: @dark-blue;
+			line-height: 24px;
+		}
+
+		#leads-tagline {
+			.font;
+			color: @dark-blue;
+			font-size: 16px;
+		}
+
+		.createdAt {
+			.font;
+		}
+
+		.sign-code {
+			.font;
+			color: @dark-blue;
+			margin-top: 30px;
+		}
+
+		.view-leads {
+			display: block;
+			margin-top: 50px;
+			a {
+				text-decoration: none;
+				color: @dark-blue;
+				.font;
+				margin-right: 4px;
+			}
+		}
+	}
+
+	.nav {
+		background: @dark-blue;
+		margin-bottom: 40px;
+		width: 240px;
+		display: inline-block;
+		position: fixed;
+
+		#email {
+			color: #FFF;
+			margin-right: 10px;
+			.font;
+			position: relative;
+			top: 14px;
+		}
+
+		a {
+			background: @light-blue;
+			color: #FFF;
+			padding: 14px 30px;
+			.font;
+			text-decoration: none;
+			display: inline-block;
+			transition: all 0.3s ease;
+			display: block;
+			margin-bottom: 1px;
+			font-size: 16px;
+
+			i {
+				margin-right: 6px;
+			}
+
+			&:hover {
+				background: lighten(@dark-blue, 10%);
+			}
+		}
+
+		@media(max-width: 990px) {
+
+			.pull-left {
+				display: none;
+			}
+			.pull-right a {
+				padding: 10px 15px;
+			}
+		}
+
+		@media(max-width: 480px) {
+			.pull-right a {
+				padding: 6px 12px;
+				font-size: 12px;
+			}
+		}
+	}
+}
+
+.marketing-site {
+
+	.section {
+		padding: 100px 0;
+
+		h2 {
+			font-size: 36px;
+		}
+
+		&#how {
+			background: #F9F9F9;
+
+			.col-md-4 {
+				text-align: center;
+
+				img {
+					max-height: 120px;
+				}
+
+				h3 {
+					margin: 30px 0;
+				}
+
+				p {
+					font-size: 16px;
+				}
+
+				h3, p {
+					.font;
+				}
+
+				&.signup {
+
+					img {
+						max-width: 110px;
+						position: relative;
+						top: 16px;
+					}
+
+					h3 {
+						margin-top: 50px;
+					}
+				}
+
+				&.yard-sign {
+					h3 {
+						margin-top: 34px;
+					}
+				}
+
+				&.leads {
+
+					img {
+						max-width: 75px;
+						position: relative;
+						top: 10px;
+					}
+
+					h3 {
+						margin-top: 48px;
+					}
+				}
+			}
+		}
+
+		&.dashboard {
+			background: #FFF;
+			padding: 100px 0 0;
+
+			h2 {
+				margin: 0 0 40px;
+			}
+
+			p {
+				.font;
+				font-size: 18px;
+				text-align: center;
+				max-width: 480px;
+				margin: 0 auto 60px;
+			}
+		}
+
+		&.leads-dash {
+			background: #F9F9F9;
+			padding: 100px 0 0;
+
+			h2 {
+				margin: 0 0 40px;
+			}
+
+			p {
+				.font;
+				font-size: 18px;
+				text-align: center;
+				max-width: 480px;
+				margin: 0 auto 60px;
+			}
+		}
+
+		&.contact-us {
+			padding: 20px 0;
+			.font;
+		}
+
+		&#pricing {
+			background: #F9F9F9;
+			margin-top: -3px;
+
+			.btn-danger {
+				.btn-green;
+				border: none;
+				margin-top: 0;
+				background: lighten(@dark-blue, 10%);
+
+				&:hover {
+					background: @dark-blue;
+				}
+			}
+
+			.btn-info {
+				.btn-green;
+				border: none;
+				margin-top: 0;
+			}
+
+			.panel-heading h3 {
+				.font;
+			}
+
+			.panel-body {
+
+				p {
+					.font;
+					font-size: 18px;
+					margin-bottom: 30px;
+				}
+
+				p.lead {
+					.font;
+					font-size: 40px;
+					margin-bottom: 10px;
+				}
+
+				p.disclaimer {
+					.font;
+				}
+
+				li {
+					.font;
+				}
+			}
+		}
+
+		&.more-info {
+			background: #F9F9F9;
+
+			.center-block {
+				text-align: center;
+			}
+
+			#thank-you {
+				display: none;
+				
+				p {
+					.font;
+					font-size: 22px;
+					color: @dark-blue;
+					text-align: center;
+				}
+			}
+
+			label {
+				.font;
+			}
+
+			input[type="submit"] {
+				.btn-green;
+				border: none;
+				margin-top: 0;
+				background: lighten(@dark-blue, 10%);
+				margin-top: 10px;
+
+				&:hover {
+					background: @dark-blue;
+				}
+			}
+		}
+
+		h2 {
+			text-align: center;
+			.font;
+			margin: 0 0 100px;
+		}
+
+		&.faq {
+
+			@media (min-width: 991px) {
+				.row {
+					margin-bottom: 60px;
+				}
+			}
+
+			@media (max-width: 990px) {
+				.row .col-md-6 {
+					margin-bottom: 30px;
+				}
+ 			}
+
+			h4 {
+				.font;
+				margin-bottom: 18px;
+				font-weight: 500;
+			}
+
+			p {
+				.font;
+			}
+		}
+	}
+
+	.marvel-device.iphone6.silver {
+		position: relative;
+		margin-bottom: -120px;
+		width: 300px;
+		height: 603.666px;
+	}
+
+	.screen {
+		background: url(https://s3.amazonaws.com/tellme-app/text-gif.gif) no-repeat;
+		background-size: cover;
+	}
+}
+
+@media(max-width: 990px) {
+	.header {
+		padding: 160px 0 0;
+
+		.intro {
+			margin-top: 0;
+			text-align: center;
+
+			h1 {
+				margin: 0 auto;
+			}
+		}
+
+		.phone {
+			text-align: center;
+			margin-top: 100px;
+		}
+	}
+
+	.marketing-site .marvel-device.iphone6.silver {
+		margin-bottom: -230px;
+	}
+
+	.section h2 {
+		margin: 0 0 40px;
+	}
+
+	.col-md-4 {
+		margin-bottom: 80px;
+
+		p {
+			max-width: 280px;
+			margin: 0 auto;
+		}
+	}
+
+	#pricing p.lead {
+		font-size: 30px!important;
+	}
+
+	.btn-green {
+		font-size: 18px;
+		padding: 12px 32px;
+	}
+
+	.btn-lg {
+		padding: 12px 32px!important;
+		font-size: 18px!important;
+	}
+}
+
+@media(max-width: 480px) {
+	.header {
+		.intro h1 {
+			font-size: 32px;
+			line-height: 38px;
+		}
+	}
+
+	#pricing p.lead {
+		font-size: 24px!important;
+	}
+}

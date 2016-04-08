@@ -1,0 +1,190 @@
+<div class="marketing-site">
+	<nav>
+		<div class="container">
+			<div id="logo" class="pull-left">
+				<a class="logo" href="/"><img src="https://s3.amazonaws.com/tellme-app/tellme_logo_lg.png"></a>
+			</div>
+			<div id="login" class="pull-right">
+				<a onclick="_gaq.push(['_trackEvent', 'nav', 'How it works', 'homepage']);" class="hidden-sm hidden-xs" href="#how">How it works</a>
+				<a onclick="_gaq.push(['_trackEvent', 'nav', 'Pricing', 'homepage']);" class="hidden-sm hidden-xs" href="#pricing">Pricing</a>
+				<% if(session.User) { %>
+						<a onclick="_gaq.push(['_trackEvent', 'nav', 'Dashboard', 'homepage']);" href="/property">Dashboard</a>
+				<% } else { %>
+						<a onclick="_gaq.push(['_trackEvent', 'nav', 'Login', 'homepage']);" href="/session/new">Login</a>
+				<% } %>
+				<a onclick="_gaq.push(['_trackEvent', 'nav', 'Sign up', 'homepage']);" class="hidden-sm hidden-xs" id="signup" href="#pricing">Sign up</a>
+			</div>
+		</div>
+	</nav>
+	<div class="header">
+		<div class="container">
+			<div class="intro col-md-8">
+				<h1><em style="font-weight:100">Never print flyers again.</em><br>Send property info to potential buyers via text.<br><em style="font-weight:100;font-size:28px;">And gather leads.</em></h1>
+				<a onclick="_gaq.push(['_trackEvent', 'cta', 'Start free trial', 'homepage']);" class="btn-green" href="#pricing">Start free trial</span></a>
+			</div>
+			<div class="col-md-4 phone">
+				<div class="marvel-device iphone6 silver">
+					<div class="top-bar"></div>
+					<div class="sleep"></div>
+					<div class="volume"></div>
+					<div class="camera"></div>
+					<div class="sensor"></div>
+					<div class="speaker"></div>
+					<div class="screen"></div>
+					<div class="home"></div>
+					<div class="bottom-bar"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section" id="how">
+		<div class="container">
+			<h2>How it works</h2>
+			<div class="row">
+				<div class="col-md-4 signup">
+					<img src="https://s3.amazonaws.com/tellme-app/signup-green.svg">
+					<h3>Create an account</h3>
+					<p>All you need to do is create an account, add a new property and enter the information about your property.</p>
+				</div>
+				<div class="col-md-4 yard-sign">
+					<img src="https://s3.amazonaws.com/tellme-app/sign-green.svg">
+					<h3>Place your sign</h3>
+					<p>Place a visible sign on your property that includes the supplied <em>Sign Code</em> and phone number from TellMe.</p>
+				</div>
+				<div class="col-md-4 leads">
+					<img src="https://s3.amazonaws.com/tellme-app/phone-green.svg">
+					<h3>Share property info</h3>
+					<p>As people text to get information on your property, you&rsquo;ll see the stats in your dashboard.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section dashboard">
+		<div class="container">
+			<h2>Property overview</h2>
+			<p>Add additional properties and manage all of your property information directly from your dashboard</p>
+			<img src="https://s3.amazonaws.com/tellme-app/dash.png" class="img-responsive">
+		</div>
+	</div>
+
+	<!-- <div class="section leads-dash">
+		<div class="container">
+			<h2>Leads</h2>
+			<p>Leads</p>
+			<div class="row">
+
+			</div>
+		</div>
+	</div> -->
+
+	<div class="section" id="pricing">
+		<div class="container">
+			<h2>Pricing</h2>
+			<div class="row">
+	 			<!-- <div class="col-sm-6">
+					<div class="panel price panel-red">
+						<div class="panel-heading  text-center">
+						<h3>SILVER</h3>
+						</div>
+						<div class="panel-body text-center">
+							<p class="lead"><strong>$9 / month</strong></p>
+							<p><em>plus $.99 per inquiry</em></p>
+						</div>
+						<ul class="list-group list-group-flush text-center">
+							<li class="list-group-item">7-day free trial</li>
+							<li class="list-group-item">Cancel anytime</li>
+							<li class="list-group-item">Unlimited properties</li>
+							<li class="list-group-item">&mdash;</li>
+						</ul>
+						<div class="panel-footer">
+							<a onclick="_gaq.push(['_trackEvent', 'plan-select', 'Silver', 'homepage']);" class="btn btn-lg btn-block btn-danger" href="/user/basic">Start trial</a>
+						</div>
+					</div>
+				</div> -->
+				
+				<div class="col-sm-6 col-sm-offset-3">
+					<div class="panel price panel-blue">
+						<div class="panel-heading arrow_box text-center">
+						<h3>PLATINUM</h3>
+						</div>
+						<div class="panel-body text-center">
+							<p class="lead"><strong>$29 / month</strong></p>
+							<!-- <p><em>plus $.99 per inquiry</em></p> -->
+						</div>
+						<ul class="list-group list-group-flush text-center">
+							<li class="list-group-item">7-day free trial</li>
+							<li class="list-group-item">Cancel anytime</li>
+							<li class="list-group-item">Unlimited properties</li>
+							<li class="list-group-item"><b>Receive lead&rsquo;s phone number</b></li>
+						</ul>
+						<div class="panel-footer">
+							<a onclick="_gaq.push(['_trackEvent', 'plan-select', 'Super', 'homepage']);" class="btn btn-lg btn-block btn-info" href="/user/plus">Start trial</a>
+						</div>
+					</div>
+				</div>		  
+			</div>
+		</div>
+	</div>
+
+	<div class="section faq">
+		<div class="container">
+			<h2>FAQ&rsquo;s</h2>
+			<div class="row">
+				<!-- <div class="col-md-6">
+					<h4>What is the $.99 fee per inquiry?</h4>
+					<p>The $.99 fee per inquiry is added onto your monthly plan amount.
+						For example, if you had a Platinum plan and received 10 inquiries on your property in one month, you would pay the $19 plus $.99 per inquiry for a total of $28.90 that month.</p>
+				</div> -->
+				<div class="col-md-6">
+					<h4>Will I be charged if I canel during my 7-day free trial?</h4>
+					<p>No. If you go to <em>Settings</em> in your dashboard and click on <em>Cancel my account</em> before your 7 days are up, we will not charge your credit card. If you do not cancel before the 7-day trial is up, we will charge your credit card for the selected plan's monthly amount.</p>
+				</div>
+				<div class="col-md-6">
+					<h4>Why is a credit card required for a free trial?</h4>
+					<p>As a security measure, we require a valid credit card for a free trial in order to elmininate spam accounts from being created.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<h4>What happens when I cancel my account?</h4>
+					<p>When you cancel your account, all of your data will be deleted from our servers permanently. We will delete your user account, your properties, your payment information will be deleted from <a href="https://stripe.com">Stripe</a>, and all of your leads will be deleted.</p>
+				</div>
+				<!-- <div class="col-md-6">
+					<h4>Will I be charged if I canel during my 7-day free trial?</h4>
+					<p>No. If you go to <em>Settings</em> in your dashboard and click on <em>Cancel my account</em> before your 7 days are up, we will not charge your credit card. If you do not cancel before the 7-day trial is up, we will charge your credit card for the selected plan's monthly amount.</p>
+				</div> -->
+			</div>
+		</div>
+	</div>
+
+	<div class="section more-info">
+		<div class="container">
+			<h2>Need more information?</h2>
+			<div id="thank-you">
+				<p>Thank you!<br>We will reach out to you soon regarding your request.</p>
+			</div>
+			<form id="more-info" method="post" action="/main/email" class="col-md-8 col-md-offset-2">
+				<label>Your email address</label>
+				<input id="info-email" type="email" class="form-control" name="email" required><br>
+				<label>Your message</label>
+				<textarea id="info-message" class="form-control" name="message" rows="6" required></textarea>
+				<div class="center-block">
+					<input type="submit" value="Talk to us">
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="section contact-us">
+		<div class="container">
+			<div class="pull-left">
+				<script>var i = new Date();document.write(i.getFullYear())</script> &copy; TellMe
+			</div>
+			<div class="pull-right">
+				Need help? <a onclick="_gaq.push(['_trackEvent', 'footer', 'Support email', 'homepage']);" href="mailto:support@tellme.co">support@tellme.co</a>
+			</div>
+		</div>
+	</div>
+</div>

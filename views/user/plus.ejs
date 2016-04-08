@@ -1,0 +1,86 @@
+<% if(flash && flash.err) { %>
+	<% Object.keys(flash.err).forEach(function(error) { %>
+		<p class="alert alert-danger"><%- flash.err[error] %></p>
+	<% }) %>
+<% } %>
+
+<div class="container">
+	<!-- <div class="col-md-6 col-md-offset-3"> -->
+	<form action="/user/create" method="POST" id="signup-form">
+	<div class="badges pull-right">
+		<a style="display:inline-block" href="https://ssl.comodo.com">
+			<img src="https://ssl.comodo.com/images/comodo_secure_100x85_white.png" alt="SSL Certificate" width="100" height="85" style="border: 0px;margin-right:18px;padding:0;">
+		</a>
+		<a style="position:relative;top:10px;" target="_blank" href="//stripe.com"><img src="https://s3.amazonaws.com/tellme-app/solid%402x.png" height="25"></a>
+	</div>
+
+	    <h3>Create a trial account..</h3><br>
+	    <div class="row col-md-12">
+	    	<div class="col-md-6">
+			    <label>Email address</label>
+			    <input type="email" class="form-control" name="email">
+		    </div>
+		    <div class="col-md-6">
+			    <label>Password</label>
+			    <input type="password" class="form-control" name="encryptedPassword">
+		    </div>
+	    </div>
+	    <div class="col-md-4">
+	    	<label>Area code for phone number</label>
+	    	<input type="text" maxlength="3" name="areaCode" class="form-control">
+	    </div>
+	    <div class="clearfix"></div>
+	    <input type="hidden" name="monthlyPlan" value="super">
+	    <div class="col-md-12">
+		<label>Credit card number<br> <em>(you will not be charged if you cancel by the end of your 7-day trial)</em></label><br>
+		<img src="https://s3.amazonaws.com/tellme-app/cc-logos.png" id="cc-logos">
+		<input class="form-control" type="text" maxlength="16" name="ccNumber" data-stripe="number"/>
+		</div>
+
+	    <div class="col-md-4">
+	    	<label>CVC</label>
+			<input type="text" maxlength="4" size="4" name="cvc" data-stripe="cvc" class="form-control"/>
+		</div>
+
+		<label style="padding-left:15px;">Expiration (MM/YYYY)</label><br>
+		<div class="col-md-2">
+			<select data-stripe="exp-month" class="form-control" name="expMonth">
+				<option value="01">01</option>
+				<option value="02">02</option>
+				<option value="03">03</option>
+				<option value="04">04</option>
+				<option value="05">05</option>
+				<option value="06">06</option>
+				<option value="07">07</option>
+				<option value="08">08</option>
+				<option value="09">09</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+			</select>
+		</div>
+		<div class="col-md-3">
+			<select class="form-control" data-stripe="exp-year" name="expYear">
+				<option value="2015">2015</option>
+				<option value="2016">2016</option>
+				<option value="2017">2017</option>
+				<option value="2018">2018</option>
+				<option value="2019">2019</option>
+				<option value="2020">2020</option>
+			</select>
+		</div>
+		<div class="col-md-6">
+			<label>Coupon Code</label>
+			<input type="text" name="couponCode" class="form-control"/>
+		</div>
+		<div class="clearfix"></div>
+
+	    <input type="submit" class="btn btn-success center-block col-xs-12" value="Begin trial"><br>
+	    <p style="text-align:center;margin-top:30px;">Already have an account? <a href="/session/new">Sign in</a></p>
+	    <input type="hidden" value="<%= _csrf %>" name="_csrf">
+			<br>
+
+
+	</form>
+	<!-- </div> -->
+</div>

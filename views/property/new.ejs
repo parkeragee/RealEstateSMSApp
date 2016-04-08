@@ -1,0 +1,43 @@
+<div class="app-main">
+	<div class="nav">
+		<img id="logo" src="https://s3.amazonaws.com/tellme-app/svg-light.svg">
+		<% if (session.User.admin){%><a class="new-property-btn" href="/main/admin">Admin</a><%}%>
+		<% if (session.User.monthlyPlan == 'plus'){%><a class="new-property-btn" href="/leads"><i class="fa fa-comments-o"></i> Leads</a><%}%>
+		<a class="new-property-btn" href="/property"><i class="fa fa-home"></i> Properties</a>
+		<a class="new-property-btn" href="/property/new"><i class="fa fa-plus"></i> Add new property</a>
+		<a class="new-property-btn" href="/settings"><i class="fa fa-cog"></i> Settings</a>
+		<a class="new-property-btn" href="/session/destroy"><i class="fa fa-sign-out"></i> Log out</a>
+	</div>
+
+	<div class="container">
+		<div class="main-content">
+			<div class="form">
+				<h3>Add new property</h3>
+				<form method="POST" action="/property/create" class="form-signin">
+					<label>Street address</label>
+					<input class="form-control" type="text" name="streetAddress" /><br>
+					<label>City</label>
+					<input class="form-control" type="text" name="city" /><br>
+					<label>State</label>
+					<input class="form-control" type="text" name="state" /><br>
+					<label>Zip Code</label>
+					<input class="form-control" type="text" name="zip" /><br>
+					<label>Description</label>
+					<textarea class="form-control" rows="4" name="description"></textarea><br>
+					<label># of Bedrooms</label>
+					<input type="text" class="form-control" name="bedrooms"><br>
+					<label># of Bathrooms</label>
+					<input type="text" class="form-control" name="bathrooms"><br>
+					<label>Square footage</label>
+					<input type="text" class="form-control" name="squareFeet"><br>
+					<label>Asking price (ex. 200,000)</label>
+					<input type="text" class="form-control" name="askingPrice"><br>
+					<input type="hidden" name="userID" value="<%= session.User.id %>" />
+					<input type="hidden" name="phoneNumber" value="<%= session.User.phoneNumber %>" />
+					<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+					<input type="submit" class="btn" value="Add Property" />
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

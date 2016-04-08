@@ -1,0 +1,42 @@
+<div class="app-main">
+	<div class="nav">
+		<img id="logo" src="https://s3.amazonaws.com/tellme-app/svg-light.svg">
+		<% if (session.User.admin){%><a class="new-property-btn" href="/main/admin">Admin</a><%}%>
+		<a class="new-property-btn" href="/leads"><i class="fa fa-comments-o"></i> Leads</a>
+		<a class="new-property-btn" href="/property"><i class="fa fa-home"></i> Properties</a>
+		<a class="new-property-btn" href="/property/new"><i class="fa fa-plus"></i> Add new property</a>
+		<a class="new-property-btn" href="/settings"><i class="fa fa-cog"></i> Settings</a>
+		<a class="new-property-btn" href="/session/destroy"><i class="fa fa-sign-out"></i> Log out</a>
+	</div>
+
+	<div class="container">
+		<div class="main-content">
+				<h1>Properties</h1>
+				<h3 class="phone-number">Your TellMe phone number: <em><span id="phone-number"><%= session.User.readableNumber %></span></em></h3>
+				<div class="properties">
+					<% _.each(property, function(property) { %>
+						<div class="property">
+							<span class="property-address">
+								<%= property.streetAddress %>
+							</span>
+							<span class="leads">
+								<%= property.leads %><br>
+								<span id="leads-tagline">Leads</span>
+							</span>
+							<span class="sign-code pull-left">
+								<em>Sign code</em>:<br>
+								<%= property.mmsIdentifier %>
+							</span>
+							<span class="view-leads pull-right">
+								<a href="/property/show/<%= property.id %>">View</a>
+								<a href="/property/edit/<%= property.id %>">Edit</a>
+								<a href="/property/delete/<%= property.id %>">Delete</a>
+							</span>
+						</div>
+					<% }) %>	
+				</div>
+		</div>
+	</div>
+</div>
+
+<%= session.User %>
